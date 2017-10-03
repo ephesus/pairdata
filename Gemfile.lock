@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    pairdata (0.0.1)
+      httparty (~> 0.15.6)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
+    minitest (5.10.3)
+    minitest-debugger (1.0.3)
+      minitest (~> 5.0)
+    multi_xml (0.6.0)
+    rake (12.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (> 1.15)
+  minitest (~> 5.0)
+  minitest-debugger
+  pairdata!
+  rake
+
+BUNDLED WITH
+   1.16.0.pre.2
