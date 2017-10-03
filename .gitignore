@@ -1,0 +1,11 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/
+/tmp/
+.ruby-version
+.ruby-gemset
+*~
