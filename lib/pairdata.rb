@@ -1,7 +1,20 @@
 # encoding: UTF-8
 
-require "pairdata/version"
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), 'pairdata')
+
+require "version"
+require "support/configuration"
 
 module Pairdata
-  # Your code goes here...
+  class << self
+    attr_accessor :config
+  end
+
+  def self.configure
+    self.config ||= Configuration.new
+    yield config
+  end
 end
+
+require 'pairdata/client' unless defined? Pairdata::Client
+

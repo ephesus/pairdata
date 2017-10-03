@@ -7,6 +7,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    fabrication (2.16.3)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
     minitest (5.10.3)
@@ -20,6 +21,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (> 1.15)
+  fabrication
   minitest (~> 5.0)
   minitest-debugger
   pairdata!
