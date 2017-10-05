@@ -6,15 +6,23 @@ require "version"
 require "support/configuration"
 
 module Pairdata
+  #create class methods and config variable on Pairdata module
   class << self
-    attr_accessor :config
-  end
+    attr_writer :config
 
-  def self.configure
-    self.config ||= Configuration.new
-    yield config
+    def config
+      @config ||= Configuration.new
+    end
+
+    def reset_config
+      @config = nil
+    end
+
+    def configure
+      @config ||= Configuration.new
+      yield @config
+    end
   end
 end
 
-require 'pairdata/client' unless defined? Pairdata::Client
-
+require 'pairdata/client' 

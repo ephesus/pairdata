@@ -9,3 +9,6 @@
 .ruby-version
 .ruby-gemset
 *~
+NOTES
+*.swp
+.byebug_history

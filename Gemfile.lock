@@ -7,6 +7,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    byebug (9.1.0)
     fabrication (2.16.3)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
@@ -21,11 +22,12 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (> 1.15)
-  fabrication
+  byebug
+  fabrication (~> 2.16.1)
   minitest (~> 5.0)
-  minitest-debugger
+  minitest-debugger (~> 1.0.0)
   pairdata!
   rake
 
 BUNDLED WITH
-   1.16.0.pre.2
+   1.16.0.pre.3
