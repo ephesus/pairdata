@@ -11,12 +11,12 @@ class PairdataTest < Minitest::Test
     
   end
 
-  def test_that_it_has_a_version_number
+  def test_that_it_has_class_variables_constants_methods
     refute_nil ::Pairdata::VERSION
+    refute_nil ::Pairdata.config
   end
 
   def test_query
-
     assert true
   end
 end
