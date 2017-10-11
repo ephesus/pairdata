@@ -2,6 +2,8 @@
 
 require 'httparty' 
 
+require 'response' 
+
 module Pairdata
   class Client
     #httparty uses self.included to add class methods, too.
@@ -27,7 +29,9 @@ module Pairdata
     end
 
     def query(query, options = {})
-      query = self.class.get(query, options)
+      handle_timeouts do
+        query = self.class.get(query, options)
+      end
     end
   end
 end

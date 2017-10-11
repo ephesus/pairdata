@@ -15,7 +15,7 @@ module Pairdata
     end
 
     def reset_config
-      @config = nil
+      @config = Configuration.new
     end
 
     def configure
