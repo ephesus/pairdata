@@ -25,4 +25,5 @@ module Pairdata
   end
 end
 
+require 'support/exceptions'
 require 'pairdata/client' 

@@ -6,13 +6,14 @@ module Pairdata
   class Configuration
     #set externally
     attr_accessor :url
-    attr_accessor :default_query_options
+    attr_accessor :default_pair_options
 
     def initialize
       #set all default values
-      @url = 'https://pairbulkdata.uspto.gov/api'
-      @default_query_options = {qf: 'patentTitle', 
-                                searchText: ''
+      @url = 'https://pairbulkdata.uspto.gov/api/queries'
+      @default_pair_options = {qf: 'patentTitle', 
+                                searchText: '',
+                                facet: 'false'
       }.freeze
     end
   end

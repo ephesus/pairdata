@@ -18,6 +18,30 @@ module Pairdata
       Pairdata.config.url = url
     end
 
+    #whatever gets passed in to pair_sync gets sent to the API
+    #response = client.pair_sync(appId: '234342')
+    def pair_sync(options = {})
+      raise Pairdata::BadQuery, 'Should be a Hash' unless options.class == Hash
+
+      body = Pairdata.config.default_pair_options.merge(options)
+      
+      handle_timeouts do
+        @results = self.class.post(Pairdata.config.url, {
+          body: body.to_json,
+          headers: { 'Content-Type' => 'application/json'}
+        })
+      end
+    end
+
+    private
+
+    #remove commas and slashes 12/345,678 => 1234578
+    def clean_app_number(appnum)
+      raise Pairdata::BadQuery, 'Should be a string' unless appnum.class == String
+
+      appnum.gsub(/[,\/]/,'')
+    end
+
     def handle_timeouts
       begin
         yield
@@ -25,12 +49,6 @@ module Pairdata
       #thrown by httparty
       rescue Net::OpenTimeout, Net::ReadTimeout
         {}
-      end
-    end
-
-    def query(query, options = {})
-      handle_timeouts do
-        query = self.class.get(query, options)
       end
     end
   end
