@@ -26,6 +26,8 @@ Create a pd object, and go to town
 ```ruby
 client = Pairdata::Client.new()
 res = client.pair_sync(applId: '12432343')
+puts res.appStatus
+puts res.patentTitle
 ```
 
 ## Contributing

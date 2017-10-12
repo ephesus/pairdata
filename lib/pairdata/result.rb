@@ -2,7 +2,7 @@
 
 module Pairdata
   class Result
-    ALLOWED_ATTRIBUTES["queryId", "patentTitle", "appStatus", "appStatusDate", "appExamName", "applIdStr", "primaryInventor", "queryId" ]
+    ALLOWED_ATTRIBUTES = ["queryId", "patentTitle", "appStatus", "appStatusDate", "appExamName", "applIdStr", "primaryInventor", "queryId" ]
 
     attr_accessor :count  
     attr_accessor :links  
@@ -32,13 +32,17 @@ module Pairdata
       
       #need to do this dynamically later
       @queryId = response.parsed_response["queryId"]
-      @appStatus = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["appStatus"]
-      @appStatusDate = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["appStatusDate"]
-      @appExamName = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["appExamName"]
-      @applIdStr = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["applIdStr"]
-      @primaryInventor = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["primaryInventor"]
-      @queryId = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["queryId"]
-      @patentTitle = response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0]["patentTitle"]
+      @appStatus = fish_out("appStatus")
+      @appStatusDate = fish_out("appStatusDate")
+      @appExamName = fish_out("appExamName")
+      @applIdStr = fish_out("applIdStr")
+      @primaryInventor = fish_out("primaryInventor")
+      @queryId = fish_out("queryId")
+      @patentTitle = fish_out("patentTitle")
+    end
+
+    def fish_out(field)
+      @response.parsed_response["queryResults"]["searchResponse"]["response"]["docs"][0][field]
     end
   end
 end
