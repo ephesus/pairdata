@@ -2,7 +2,7 @@
 
 require 'httparty' 
 
-require 'response' 
+require 'result' 
 
 module Pairdata
   class Client
@@ -23,6 +23,7 @@ module Pairdata
     def pair_sync(options = {})
       raise Pairdata::BadQuery, 'Should be a Hash' unless options.class == Hash
 
+      options[:searchText] = clean_app_number(options[:searchText])
       body = Pairdata.config.default_pair_options.merge(options)
       
       handle_timeouts do
@@ -31,6 +32,8 @@ module Pairdata
           headers: { 'Content-Type' => 'application/json'}
         })
       end
+
+      Pairdata::Result.new(@results)
     end
 
     private

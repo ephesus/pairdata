@@ -11,7 +11,7 @@ module Pairdata
     def initialize
       #set all default values
       @url = 'https://pairbulkdata.uspto.gov/api/queries'
-      @default_pair_options = {qf: 'patentTitle', 
+      @default_pair_options = {qf: 'applId', 
                                 searchText: '',
                                 facet: 'false'
       }.freeze
