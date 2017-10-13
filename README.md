@@ -22,13 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-Create a pd object, and go to town
+Create a pd object, and go to town.
 ```ruby
 client = Pairdata::Client.new()
-res = client.pair_sync(applId: '12432343')
+res = client.pair_sync(searchText: '12432343')
 puts res.appStatus
 puts res.patentTitle
 ```
+The only required field is searchText, which defaults to searching qf:applId  
+
+Search something else by adding a searchText and qf of your own
+
+the result is a Pairdata::Result object.  
+full hash is res.response  
+number of responses is res.count  
 
 ## Contributing
 
