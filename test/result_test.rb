@@ -22,7 +22,11 @@ class ResultTest < Minitest::Test
 
   def test_initial_object
     Pairdata::Result::ALLOWED_ATTRIBUTES.each do |att|
-      assert_equal @expected[att.to_sym], @result.instance_variable_get("@#{att}")
+      if @expected[att.to_sym].nil?
+        assert_nil @result.instance_variable_get("@#{att}")
+      else
+        assert_equal @expected[att.to_sym], @result.instance_variable_get("@#{att}")
+      end
     end
   end
 end

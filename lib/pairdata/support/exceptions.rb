@@ -7,4 +7,13 @@ module Pairdata
       super(msg)
     end
   end
+
+  class BadAttribute < StandardError
+    attr_reader :intel
+
+    def initialize(msg="Attribute Not available/allowed")
+      @intel = { url: Pairdata.config.url }
+      super(msg)
+    end
+  end
 end
