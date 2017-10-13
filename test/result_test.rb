@@ -12,7 +12,11 @@ class ResultTest < Minitest::Test
                   :appExamName => 'BOLOGNA, DOMINIC JOSEPH',
                   :applIdStr => '14/898,567',
                   :applId => '14898567',
-                  :primaryInventor => 'Pil Sang Yoo , Gyeonggi-do (KR)' }
+                  :primaryInventor => 'Pil Sang Yoo , Gyeonggi-do (KR)',
+                  :primaryInventorFirstName => 'Pil',
+                  :primaryInventorLastName => 'Yoo',
+                  :primaryInventorMiddleName => 'Sang'
+    }
 
     @result = Pairdata::Result.new(YAML::load_file(File.join(__dir__, 'txt/result.txt')))
   end
