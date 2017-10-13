@@ -1,0 +1,97 @@
+---
+links:
+- rel: self
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce?format=XML
+- rel: results
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=1
+- rel: package
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/package?format=XML
+- rel: first
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=1
+- rel: next
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=2
+- rel: self
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce?format=JSON
+- rel: results
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=1
+- rel: package
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/package?format=JSON
+- rel: first
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=1
+- rel: next
+  href: https://pairbulkdata.uspto.gov/api/queries/699e0cb2-7c58-4050-a638-8bb6ffa908ce/results?page=2
+queryResults:
+  indexLastUpdatedDate: Thu Oct 12 18:53:57 EDT 2017
+  searchResponse:
+    responseHeader:
+      status: 0
+      QTime: 7
+    response:
+      numFound: 1
+      start: 0
+      docs:
+      - id: '14898567'
+        patentTitle: AUTOMATIC PILL INSPECTION APPARATUS
+        applId: '14898567'
+        applIdStr: 14/898,567
+        appl_id_txt: 14/898,567
+        appFilingDate: '2017-05-26T04:00:00Z'
+        appType: Utility
+        appTypeFacet: Utility
+        appExamLastName: BOLOGNA
+        appExamFirstName: DOMINIC
+        appExamMdlName: JOSEPH
+        appExamName: BOLOGNA, DOMINIC JOSEPH
+        appExamNameFacet: BOLOGNA, DOMINIC JOSEPH
+        appConfrNumber: 3710
+        appAttrDockNumber: 32404/50200
+        appClsSubCls: 356/237.200
+        appClsSubClsFacet: 356/237.200
+        appCls: '356'
+        appSubCls: '237.200'
+        primaryInventor: Pil Sang Yoo , Gyeonggi-do (KR)
+        primaryInventorFirstName: Pil
+        primaryInventorMiddleName: Sang
+        primaryInventorLastName: Yoo
+        primaryInventorCity: Gyeonggi-do
+        primaryInventorRegion: ''
+        primaryInventorCountry: KR
+        rankAndInventorsList:
+        - 1---Pil---Sang---Yoo
+        rankAndInventorsList_str:
+        - Pil Sang Yoo , Gyeonggi-do ,   (KR)
+        rankAndInventorsAddressList:
+        - 1---Gyeonggi-do--- ---(KR)
+        appGrpArtNumber: '2877'
+        appGrpArtNumberFacet: '2877'
+        appCustNumber: 4743
+        appStatus: Non Final Action Mailed
+        appStatus_txt: Non Final Action Mailed
+        appStatusDate: '2017-06-14T04:00:00Z'
+        appEntityStatus: SMALL
+        appEntityStatus_txt: SMALL
+        appLocation: ELECTRONIC
+        appLocationFacet: ELECTRONIC
+        appEarlyPubNumber: US 2017-0254762 A1
+        appEarlyPubNumberFacet: US 2017-0254762 A1
+        appPubyear: '2017'
+        ipOfficeCode: US
+        appEarlyPubDate: '2017-09-07T04:00:00Z'
+        firstInventorFile: 'Yes'
+        patentKindCode: A1
+        appFilingYear: 2017
+        patentIssueYear: 0
+        intlFilingYear: 0
+        appStatusYear: 2017
+        appLocationYear: 0
+        appEarlyPubYear: 2017
+        appIntlPubYear: 0
+        publishDocJson: '{"applicationPublication":{"patentPublicationIdentification":{"publicationNumber":"US20170254762A1","publicationDate":"2017-09-07"},"webURI":"http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PG01&p=1&u=/netahtml/PTO/srchnum.html&r=1&f=G&l=50&s1=20170254762.PGNR.&OS=DN/20170254762&RS=DN/20170254762"},"grantPublication":{"patentGrantIdentification":{"patentNumber":"0"},"webURI":"
+          "}}'
+        _version_: 1577979375065759746
+        lastUpdatedTimestamp: '2017-09-08T13:50:36.25Z'
+  queryId: 699e0cb2-7c58-4050-a638-8bb6ffa908ce
+jobStatus: 
+queryId: 699e0cb2-7c58-4050-a638-8bb6ffa908ce
+page: 1
+count: 10
