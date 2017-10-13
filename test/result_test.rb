@@ -24,12 +24,29 @@ class ResultTest < Minitest::Test
   def teardown
   end
 
+  def expose_p(method)
+    Pairdata::Result.send(:public, method)
+
+    yield
+
+    Pairdata::Result.send(:private, method)
+  end
+
+
   def test_initial_object
     Pairdata::Result::ALLOWED_ATTRIBUTES.each do |att|
       if @expected[att.to_sym].nil?
         assert_nil @result.instance_variable_get("@#{att}")
       else
         assert_equal @expected[att.to_sym], @result.instance_variable_get("@#{att}")
+      end
+    end
+  end
+
+  def test_invalid_attribute
+    assert_raises Pairdata::BadAttribute do
+      expose_p(:fish_out) do
+        @result.fish_out('randomattribute')
       end
     end
   end

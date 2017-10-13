@@ -11,6 +11,14 @@ class ClientTest < Minitest::Test
     
   end
 
+  def expose_p(method)
+    Pairdata::Client.send(:public, method)
+
+    yield
+
+    Pairdata::Client.send(:private, method)
+  end
+
   def test_url_config_set
     new_url = 'http://wrive.com'
     @client.set_url(new_url)

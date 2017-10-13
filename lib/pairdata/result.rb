@@ -41,8 +41,10 @@ module Pairdata
       end
     end
 
-    def fish_out(field)
-      @response['queryResults']['searchResponse']['response']['docs'][@start.to_i][field]
+    def fish_out(attri)
+      raise Pairdata::BadAttribute unless ALLOWED_ATTRIBUTES.include? attri
+
+      @response['queryResults']['searchResponse']['response']['docs'][@start.to_i][attri]
     end
   end
 end

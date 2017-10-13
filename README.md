@@ -35,7 +35,7 @@ Search something else by adding a searchText and qf of your own
 
 the result is a Pairdata::Result object.  
 full hash is res.response  
-number of responses is res.count  
+number of responses is res.numFound  
 
 ## Contributing
 
