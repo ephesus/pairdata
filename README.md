@@ -1,6 +1,6 @@
 # Pairdata
 
-NOTE: This gem is under development, and currently barely works.
+NOTE: This gem is in alpha.
 Pairdata is a wrapper for the USPTO's Pair Bulk Data public API https://pairbulkdata.uspto.gov/
 
 
